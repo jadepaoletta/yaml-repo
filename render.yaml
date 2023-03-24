@@ -1,0 +1,14 @@
+previewsEnabled: true
+services:
+  - type: web
+    name: blahblah
+    env: python
+    region: oregon
+    plan: starter
+    repo: https://github.com/jadepaoletta/flask-not-a-fork
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    autoDeploy: false
+    envVars:
+      - key: Blah
+        value: test
